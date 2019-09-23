@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+int main()
+{
+int i,k,n;
+cout<<"\n\n\tввести количство чисел в натуральном ряде:";
+cin>>n;
+n+=1;	
+int A[n]; 
+i=0;
+for (k=1;k<n;k++)
+{
+	A[k]=rand()%7;
+	printf("\t%i",A[k]);
+    i+=A[k];
+}
+printf("\n\n\tсумма всех чисел:%i",i);
+system("pause");
+return 0;
+}
