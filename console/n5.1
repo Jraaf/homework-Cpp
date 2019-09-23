@@ -1,27 +1,32 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
 int main()
 {
 	setlocale(LC_ALL, ".1251");
-	string Fi[7] = {"2015:","Динамо","Шахтёр","Днепр","Заря","Ворскла" };
-	string Si[7] = {"2016:","Шахтёр","Динамо","Заря","Олимпик", "Александрия" };
-	string Se[7] = {"2017:","Шахтер","Динамо",	"Ворскла","Заря","Верес" };
-	for (int i = 0; i < 7; i++)
+	string F[3][5] = { "Динамо","Шахтёр","Днепр","Заря","Ворскла",
+	"Шахтёр","Динамо","Заря","Олимпик", "Александрия", 
+	"Шахтер","Динамо",	"Ворскла","Заря", "Верес"
+	};
+	int summ = 0;
+	
+	for (int i = 0; i < 3; i++) 
 	{
-		cout << Fi[i] << " " ;
+
+		cout << i + 2015<<": ";
+		for (int k = 0; k < 5; k++) 
+		{
+			cout << F[i][k]<<", ";
+
+			if (F[i][k] == "Днепр")
+			{
+				summ++;
+			}
+		}
+		cout << endl;
+
 	}
-	cout << "\n";
-	for (int i = 0; i < 7; i++)
-	{
-		cout << Si[i] << " ";
-	}cout << "\n";
-	for (int i = 0; i < 7; i++)
-	{
-		cout << Se[i] << " ";
-	}cout << "\n";
-	cout << "\nДнiпро не було на першому мiсцi"<<endl;
+	cout << summ << endl;
 	system("pause");
 	return 0;
 }
