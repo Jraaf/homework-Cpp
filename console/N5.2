@@ -1,17 +1,13 @@
-#include <cstdlib>
 #include <iostream>
 using namespace std;
 int main()
 {
-	int A[7];
-	for (int i=0;i<6;i++)
-	{
-	A[i]=rand()%6+1;
-	printf("\n\tмассив:%i\n\t",A[i] );
-	int summ;
-	summ+=A[i];
-	printf("сумма всех предидущих значнний=%i",summ);
-	}
+	setlocale(LC_ALL, (".1251"));
+	int i, k,summ;summ = 0;
+	cout << "\n\n\tвведите значение наурального ряда, значение которогo не привышает 7:";
+	cin >> i;
+	for (k = 0; k <= i; k++)summ += k;
+	printf("\n\n\tсума всех чисел в ряде=%i\n",summ);
 	system("pause");
 	return 0;
 }
